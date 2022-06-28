@@ -1,11 +1,9 @@
 #include <stdio.h>
+#include <cs50.h>
 
 int main(void)
 
 {
-    int x = 10;
-    x=x/6;
-    // int y = 1;
-
+    int x = get_int("type integer: ");
     printf ("%i\n",x);
 }
