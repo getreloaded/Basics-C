@@ -18,6 +18,7 @@ int main(void)
 
     while (count < n)
     {
+
         // set the test to true which will become false {0} only when the number is divisible by any of the previous primes.
         test = 1;
 
@@ -26,8 +27,10 @@ int main(void)
         // more expensive program with all the numbers checked against the i.
         // for (int k = 2; k < i; k++)
         // {
+
         //     if (i % k == 0)
         //     {
+
         //         test = 0;
         //         break;
         //     }
@@ -36,8 +39,10 @@ int main(void)
         // less expensive program with only the previously found primes checked against i for divisibility. ALso no primes above the half of the value of I will be checked.
         for (int k = 0; k < count; k++)
         {
+
             if (prime[k] > i / 2.0)
             {
+
                 break;
             }
 
@@ -50,11 +55,10 @@ int main(void)
 
         if (test == 1)
         {
+            // increase the count everytime you put in the prime number in the array.
             prime[count] = i;
             count++;
         }
-
-        // increase the count everytime you put in the prime number in the array.
 
         i = i + 2;
     }
